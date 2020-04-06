@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  
+//
 //
 //  Created by Adam Fordyce on 04/02/2020.
 //
@@ -41,10 +41,12 @@ public extension EnvironmentValues {
 
 public extension View {
     
+    @inlinable
     func showLayoutGuides(_ value: Bool) -> some View {
         environment(\.showLayoutGuides, value)
     }
     
+    @inlinable
     func showControlPoints(_ value: Bool) -> some View {
         environment(\.showControlPoints, value)
     }
