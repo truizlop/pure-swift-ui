@@ -50,12 +50,12 @@ public enum PreviewDeviceName: String, CaseIterable {
 
 public extension View {
     
-    @inlinable
+    
     func previewDevice(_ previewDeviceName: PreviewDeviceName) -> some View {
         previewDevice(previewDeviceName, displayName: previewDeviceName.rawValue)
     }
 
-    @inlinable
+    
     func previewDevice(_ previewDeviceName: PreviewDeviceName, displayName: String) -> some View {
         previewDevice(PreviewDevice(rawValue: previewDeviceName.rawValue))
             .previewDisplayName(displayName)
@@ -66,22 +66,22 @@ public extension View {
 
 public extension View {
 
-    @inlinable
+    
     func previewSizeThatFits() -> some View {
         previewLayout(.sizeThatFits)
     }
 
-    @inlinable
+    
     func previewFixedSize(_ size: CGSize) -> some View {
         previewLayout(.fixed(width: size.width, height: size.height))
     }
 
-    @inlinable
+    
     func previewFixedSize<T: UINumericType>(_ size: T) -> some View {
         previewLayout(.fixed(width: size.asCGFloat, height: size.asCGFloat))
     }
 
-    @inlinable
+    
     func previewFixedSize<TX: UINumericType, TY: UINumericType>(_ x: TX, _ y: TY) -> some View {
         previewLayout(.fixed(width: x.asCGFloat, height: y.asCGFloat))
     }
